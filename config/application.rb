@@ -53,6 +53,15 @@ module Datagester
     # parameters by using an attr_accessible or attr_protected declaration.
     config.active_record.whitelist_attributes = true
 
+    # Configure generators values. Many other options are available, be sure to check the documentation.
+    config.generators do |g|
+      g.assets          false
+      g.helper          false
+      g.orm             :active_record
+      g.template_engine :haml
+      g.test_framework  :test_unit, :fixture => false
+    end
+
     # Enable the asset pipeline
     config.assets.enabled = true
 
