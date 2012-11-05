@@ -1,3 +1,3 @@
 class Email < ActiveRecord::Base
-  attr_accessible :from, :subject, :text, :to
+  attr_accessible :from, :subject, :text, :to, :headers
 end
